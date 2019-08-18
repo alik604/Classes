@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)https://coursys.sfu.ca/2019sp-cmpt-310-d1/pages/a3 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="origin">
+  <title>CourSys - Assignment 3</title>
+  <link rel="stylesheet" href="./CourSys - Assignment 3_files/c1831ff6795b.css" type="text/css">
+
+  <script type="text/javascript" src="./CourSys - Assignment 3_files/5ab08557caed.js.download"></script>
+
+  <!--[if lt IE 9]>
+  <script type="text/javascript" src="/static/CACHE/js/216d122e438b.js"></script>
+  <![endif]-->
+  <!--[if lte IE 9]>
+  <script type="text/javascript" src="/static/CACHE/js/129a85805671.js"></script>
+  <![endif]-->
+
+  <link rel="icon" href="https://coursys.sfu.ca/static/icons/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="https://coursys.sfu.ca/static/icons/favicon.ico" type="image/x-icon">
+
+  
+
+
+<script src="./CourSys - Assignment 3_files/mathjax-config.js.download"></script>
+<script src="./CourSys - Assignment 3_files/latest.js.download" referrerpolicy="no-referrer"></script><script type="text/javascript" async="" src="./CourSys - Assignment 3_files/MathJax.js.download"></script>
+<script type="text/javascript" src="./CourSys - Assignment 3_files/ab3c4783901b.js.download"></script>
+<link rel="stylesheet" href="./CourSys - Assignment 3_files/vs.css">
+
+<style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuRadioCheck.RTL {right: 1em; left: auto}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover, .MJXp-munder {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > *, .MJXp-munder > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style></head>
+
+<body><div id="MathJax_Message" style="display: none;"></div>
+  <div id="container" class="">
+    <div id="page">
+      <header>
+        <button class="toggle-search-control">Search</button>
+        <section class="heading">
+          <div class="brand-title">
+            <a href="http://www.sfu.ca/">
+            <div class="branding">
+              <h1>Simon Fraser University<br>Engaging the World</h1>
+            </div></a> <!-- end branding -->
+            <div class="site-title"><h2><a href="https://coursys.sfu.ca/">CourSys</a></h2></div>
+          </div>
+        </section>
+        <section class="actionable-header ab-yes">
+          <div class="search">
+            <form action="https://coursys.sfu.ca/search" method="get">
+              <fieldset class="search-field">
+                <span class="searchlabel"><a href="https://coursys.sfu.ca/docs/search">Search</a> for students, courses, discussion, pages:</span>
+                <input type="search" placeholder="Search for students, discussion, etc." name="q">
+              </fieldset>
+
+              <fieldset class="search-scope-set">
+                <label><input type="radio" checked="checked" value="site" name="search-scope">This site</label>
+                <label><input type="radio" value="sfu" name="search-scope">SFU.ca</label>
+              </fieldset>
+            </form>
+          </div>
+          <div class="global-links">
+            <div class="mobile-global-links-container">
+              <ul class="mobile-global-links">
+                <li class="header">
+                  <a href="http://www.sfu.ca/directory">A-Z <span>directory</span></a>
+                </li>
+
+                <li class="header sign-in">
+                  
+                    <a href="https://coursys.sfu.ca/logout/">Sign Out</a>
+				  
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </header>
+
+      <div class="header-divider">
+            <div id="sysmenu">
+			
+			Logged in as kpardhan. <a href="https://coursys.sfu.ca/logout/">Logout</a>
+			
+			</div>
+      </div><!-- end header-divider -->
+
+      <div id="page-content" class="two-column">
+
+        
+        <div class="subnav-wrapper">
+          
+
+
+        </div>
+        
+
+        <div class="breadcrumb">
+        <ul><li><a href="https://coursys.sfu.ca/">CourSys</a></li><li><a href="https://coursys.sfu.ca/2019sp-cmpt-310-d1/">CMPT 310 D1</a></li><li><a href="https://coursys.sfu.ca/2019sp-cmpt-310-d1/pages/">Pages</a></li><li>a3</li></ul>
+        </div>
+
+        <div class="mobile-sub-nav">
+          <div class="mobile-sub-menu"></div>
+        </div>
+
+        <section class="main">
+          <div class="inherited-parsys above-main">
+            
+            
+          </div>
+
+          <div class="parsys main_content">
+            <div class="title section">
+              <div>
+                <h1>Assignment 3</h1>
+              </div>
+            </div>
+
+            
+
+
+
+
+<div class="wikicontents markdown tex2jax_ignore"><p>In this assignment, we will use the Viterbi algorithm on a hidden Markov model to detect C/G rich regions in a DNA sequence.</p>
+<p>DNA sequences are made up of the four letters A, C, T and G (each letter corresponding to a particular nucleic acid). It turns out that, in the genomes of many organisms (including humans), the DNA letters are not distributed randomly, but rather have some regions with more A's and T's and some regions with more C's and G's. It turns out that C/G rich regions tend to have more genes, whereas A/T rich regions tend have more non-functional DNA. In this assignment we will analyze the genome of the bacterium Escherichia coli (E. coli), which is commonly found in the human gut.</p>
+<p>We will use a hidden Markov model to detect C/G rich regions in a DNA sequence. We will use an HMM with two states, corresponding to low- and high-C/G regions respectively. The prior, transition and emission probabilities are given in the template file.</p>
+<p>You need to implement two functions. HMM.logprob() calculates the probability of a particular sequence of states and characters. HMM.viterbi() uses the Viterbi algorithm to calculate the most likely sequence of states given a sequence of DNA characters. In other words, logprob() computes log(P(sequence, states)) and viterbi() computes argmax_states P(sequence, states).</p>
+<h2>Files</h2>
+<p>Download the code template <a href="https://coursys.sfu.ca/2019sp-cmpt-310-d1/pages/a3_template">here</a>. You should write your code between the comments marked "Begin/End your code". You may add extra functions as you like.</p>
+<p>The input file is a single sequence of letters A, C, T, G. Download a small example <a href="https://coursys.sfu.ca/2019sp-cmpt-310-d1/pages/small.txt">here</a>. When you're ready to run on the full E. coli genome, download it <a href="https://coursys.sfu.ca/2019sp-cmpt-310-d1/pages/ecoli.txt">here</a> (5m letters, 5MB file).</p>
+<p>Your program should output a file in the following format. The first line is the (natural) log probability of the sequence, as calculated by HMM.logprob(). The second and third lines is number of inferred 0 and 1 states respectively in your inferred sequence of states. The fourth line is a sequence of states (0 or 1) with the highest probability of outputting the observed sequence, calculated using the Viterbi algorithm. Use the write_output() function to produce this output file. Download the correct output file for the small example <a href="https://coursys.sfu.ca/2017fa-cmpt-310-d1/pages/small_output.txt">here</a>.</p>
+<h2>Guidelines</h2>
+<p>Please use Python 3 for this assignment.</p>
+<p>100 points total, worth 10% of the course grade. Turn in on CourSys. Submit a compressed directory (.zip or .tar.gz) with (1) your code in one file name "a3.py" and (2) your E. coli output named ecoli_output.txt.</p>
+<p>You should be able to test your code running the following commands:</p>
+<pre lang="python" class="highlight lang-python hljs"><code>python a3_template.py <span class="hljs-string">"small.txt"</span> 
+python a3_template.py <span class="hljs-string">"ecoli.txt"</span> 
+</code></pre>
+<p>Grading: Your solution will be evaluated on accuracy and clarity. Solutions that are hard to understand will be given a maximum of 50/100 points. Please use a logical structure, use informative variable names, and document your code thoroughly so that your solution is understandable.</p>
+<p>You are encouraged to work in a group. Feel free to discuss solution strategies and check each other’s work. However, you must write all the text and code you submit on your own. Joint submissions are not allowed, nor is copying someone else's text or code. Plagiarism is not okay, and will be taken very seriously. If you’re not sure whether something is okay, please ask.</p>
+<p>If you are having trouble, please take advantage of office hours and the discussion forum. If you see a question from another student on the discussion forum that you think you know the answer to, please respond. (Do your best to lead your fellow student to a solution, rather than simply giving the solution directly.)</p></div>
+
+<div class="updateinfo">Updated Mon March 04 2019, 12:02 by raoki.
+
+</div>
+
+
+          </div>
+
+          <div class="inherited-parsys below-main"></div>
+        </section>
+
+        <footer>
+            <div>CourSys is hosted by <a href="https://www.sfu.ca/computing.html">SFU Computing Science</a>.</div>
+          <ul>
+            <li><a href="http://www.sfu.ca/admission">Admission</a></li>
+            <li><a href="http://www.sfu.ca/programs">Programs</a></li>
+            <li><a href="http://www.sfu.ca/learning">Learning</a></li>
+            <li><a href="http://www.sfu.ca/research-at-sfu">Research</a></li>
+            <li><a href="http://www.sfu.ca/sfu-community">Community</a></li>
+            <li><a href="http://www.sfu.ca/about">About</a></li>
+          </ul>
+          <ul>
+            <li><a href="http://www.sfu.ca/campuses/maps.html">Maps + directions</a></li>
+            <li><a href="http://www.lib.sfu.ca/">Library</a></li>
+            <li><a href="http://www.sfu.ca/calendar">Academic Calendar</a></li>
+            <li><a href="http://www.sfu.ca/roads">Road Report</a></li>
+            <li><a href="http://www.sfu.ca/advancement">Give to SFU</a></li>
+          </ul>
+
+          <ul>
+            <li class="header">Connect with us</li>
+            <li>
+              <div class="inherited-parsys connect-with-us">
+                <div class="parsys">
+                  <div class="text parbase section">
+                    <div class="">
+                      <p><a href="http://www.facebook.com/simonfraseruniversity">Facebook</a><br>
+                      <a href="http://www.twitter.com/sfu">Twitter</a><br>
+                      <a href="http://www.youtube.com/user/SFUNews">YouTube</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <ul>
+            <li class="header"><a href="http://www.sfu.ca/clf/contact.html">Contact us</a></li>
+
+            <li>
+              <div class="inherited-parsys contact-us">
+                <div class="parsys">
+                  <div class="text parbase section">
+                    <div class="">
+                      <p>Simon Fraser University<br>
+                      8888 University Drive<br>
+                      Burnaby, B.C.<br>
+                      Canada V5A 1S6</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <ul>
+            <li><div class="inherited-parsys footer-right"></div></li>
+            <li><a href="http://www.sfu.ca/contact/terms-conditions.html">Terms and conditions</a></li>
+            <li>© Simon Fraser University</li>
+          </ul>
+        </footer>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="./CourSys - Assignment 3_files/082e84ea9840.js.download"></script>
+
+
+</body></html>

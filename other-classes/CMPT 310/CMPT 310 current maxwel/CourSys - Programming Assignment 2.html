@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)https://coursys.sfu.ca/2019sp-cmpt-310-d1/pages/a2 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="origin">
+  <title>CourSys - Programming Assignment 2</title>
+  <link rel="stylesheet" href="./CourSys - Programming Assignment 2_files/c1831ff6795b.css" type="text/css">
+
+  <script type="text/javascript" src="./CourSys - Programming Assignment 2_files/5ab08557caed.js.download"></script>
+
+  <!--[if lt IE 9]>
+  <script type="text/javascript" src="/static/CACHE/js/216d122e438b.js"></script>
+  <![endif]-->
+  <!--[if lte IE 9]>
+  <script type="text/javascript" src="/static/CACHE/js/129a85805671.js"></script>
+  <![endif]-->
+
+  <link rel="icon" href="https://coursys.sfu.ca/static/icons/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="https://coursys.sfu.ca/static/icons/favicon.ico" type="image/x-icon">
+
+  
+
+
+<script src="./CourSys - Programming Assignment 2_files/mathjax-config.js.download"></script>
+<script src="./CourSys - Programming Assignment 2_files/latest.js.download" referrerpolicy="no-referrer"></script><script type="text/javascript" async="" src="./CourSys - Programming Assignment 2_files/MathJax.js.download"></script>
+<script type="text/javascript" src="./CourSys - Programming Assignment 2_files/ab3c4783901b.js.download"></script>
+<link rel="stylesheet" href="./CourSys - Programming Assignment 2_files/vs.css">
+
+<style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuRadioCheck.RTL {right: 1em; left: auto}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover, .MJXp-munder {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > *, .MJXp-munder > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style></head>
+
+<body><div id="MathJax_Message" style="display: none;"></div>
+  <div id="container" class="">
+    <div id="page">
+      <header>
+        <button class="toggle-search-control">Search</button>
+        <section class="heading">
+          <div class="brand-title">
+            <a href="http://www.sfu.ca/">
+            <div class="branding">
+              <h1>Simon Fraser University<br>Engaging the World</h1>
+            </div></a> <!-- end branding -->
+            <div class="site-title"><h2><a href="https://coursys.sfu.ca/">CourSys</a></h2></div>
+          </div>
+        </section>
+        <section class="actionable-header ab-yes">
+          <div class="search">
+            <form action="https://coursys.sfu.ca/search" method="get">
+              <fieldset class="search-field">
+                <span class="searchlabel"><a href="https://coursys.sfu.ca/docs/search">Search</a> for students, courses, discussion, pages:</span>
+                <input type="search" placeholder="Search for students, discussion, etc." name="q">
+              </fieldset>
+
+              <fieldset class="search-scope-set">
+                <label><input type="radio" checked="checked" value="site" name="search-scope">This site</label>
+                <label><input type="radio" value="sfu" name="search-scope">SFU.ca</label>
+              </fieldset>
+            </form>
+          </div>
+          <div class="global-links">
+            <div class="mobile-global-links-container">
+              <ul class="mobile-global-links">
+                <li class="header">
+                  <a href="http://www.sfu.ca/directory">A-Z <span>directory</span></a>
+                </li>
+
+                <li class="header sign-in">
+                  
+                    <a href="https://coursys.sfu.ca/logout/">Sign Out</a>
+				  
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </header>
+
+      <div class="header-divider">
+            <div id="sysmenu">
+			
+			Logged in as kpardhan. <a href="https://coursys.sfu.ca/logout/">Logout</a>
+			
+			</div>
+      </div><!-- end header-divider -->
+
+      <div id="page-content" class="two-column">
+
+        
+        <div class="subnav-wrapper">
+          
+
+
+        </div>
+        
+
+        <div class="breadcrumb">
+        <ul><li><a href="https://coursys.sfu.ca/">CourSys</a></li><li><a href="https://coursys.sfu.ca/2019sp-cmpt-310-d1/">CMPT 310 D1</a></li><li><a href="https://coursys.sfu.ca/2019sp-cmpt-310-d1/pages/">Pages</a></li><li>A2</li></ul>
+        </div>
+
+        <div class="mobile-sub-nav">
+          <div class="mobile-sub-menu"></div>
+        </div>
+
+        <section class="main">
+          <div class="inherited-parsys above-main">
+            
+            
+          </div>
+
+          <div class="parsys main_content">
+            <div class="title section">
+              <div>
+                <h1>Programming Assignment 2</h1>
+              </div>
+            </div>
+
+            
+
+
+
+
+<div class="wikicontents markdown tex2jax_process"><p>In this assignment, you will solve a version of Sudoku using you own SAT solver.</p>
+<p>We have provided a template for you to start with. You can download all the code as a zip <a href="https://coursys.sfu.ca/2019sp-cmpt-310-d1/pages/A2.zip/view">here</a>.</p>
+<p><strong>What to submit</strong>: You should submit a single zip file that contains the following:</p>
+<ul>
+<li>Your program</li>
+<li>(Optional) the contest folder</li>
+</ul>
+<h2>Part 0 DIMACS CNF file format.</h2>
+<p>This format is used to define a Boolean expression, written in conjunctive normal form (CNF), that may be used as an example of the satisfiability problem.</p>
+<p>The satisfiability problem considers the case in which N boolean variables are used to form a Boolean expression involving negation (NOT), conjunction (AND) and disjunction (OR). The problem is to determine whether there is any assignment of values to the Boolean variables which makes the formula true. It's something like trying to flip a bunch of switches to find the setting that makes a light bulb turn on.</p>
+<p>For simplicity, it is common to require that the boolean expression be written in conjunction normal form or "CNF". A formula in conjunctive normal form consists:</p>
+<pre><code>    * clauses joined by AND;
+    * each clause, in turn, consists of literals joined by OR;
+    * each literal is either the name of a variable (a positive literal, 
+      or the name of a variable preceded by NOT (a negative literal.)
+</code></pre>
+<p>An example of a boolean expression in 3 variables and 2 clauses:</p>
+<pre><code>        ( x(1) OR ( NOT x(3) ) )
+        AND
+        ( x(2) OR x(3) OR ( NOT x(1) ) ).
+</code></pre>
+<p>The CNF file format is an ASCII file format.</p>
+<p>The file may begin with comment lines. The first character of each comment line must be a lower case letter "c". Comment lines typically occur in one section at the beginning of the file but are allowed to appear throughout the file.</p>
+<p>The comment lines are followed by the "problem" line. This begins with a lower case "p" followed by a space, followed by the problem type, which for CNF files is "cnf", followed by the number of variables followed by the number of clauses.</p>
+<p>The remainder of the file contains lines defining the clauses, one by one.</p>
+<p>A clause is defined by listing the index of each positive literal, and the negative index of each negative literal. Indices are 1-based, and for obvious reasons, the index 0 is not allowed.</p>
+<p>The definition of a clause may extend beyond a single line of text.</p>
+<p>The definition of a clause is terminated by a final value of 0.</p>
+<p>The file terminates after the last clause is defined.</p>
+<p>Some of the examples of DIMACS CNF file can be found from SATLIB at UBC <a href="https://www.cs.ubc.ca/~hoos/SATLIB/benchm.html">https://www.cs.ubc.ca/~hoos/SATLIB/benchm.html</a></p>
+<p>Example:</p>
+<p>Here is the CNF file that corresponds to the simple formula discussed above:</p>
+<pre><code>      c  simple_v3_c2.cnf
+      c
+      p cnf 3 2
+      1 -3 0
+      2 3 -1 0
+</code></pre>
+<h2>Part 1 Encode Sudoku game in CNF (Dimacs format)</h2>
+<p><strong>The Sudoku game</strong></p>
+<p><img src="./CourSys - Programming Assignment 2_files/600px-Sudoku_Puzzle_by_L2G-20050714_standardized_layout.svg.png" alt="alt text" title="A typical Sudoku puzzle"></p>
+<p>For this assignment, we are solving a simplified sudoku without the box constraints. The simpler version of Sudoku is played on an NxN board (of course, N&gt;0). The goal of the game is to place N copies of numbers 1 thru N on this board satisfying the following constraints in conjunction with constraints stemming from numbers already placed on the board, e.g., cell (1,1) contains 5.</p>
+<pre><code>    1. Each cell contains exactly one copy of any number.
+    2. Each row contains every number exactly once, 
+           i.e., there are no duplicate copies of a number in a row.
+    3. Each column contains every number exactly once,
+          i.e., there are no duplicate copies of a number in a column.
+</code></pre>
+<p>A solution to a given board will say which copy of a number should be placed in which cell.</p>
+<p><strong>Encoding</strong></p>
+<p>We will use one variable Vx,y,n to represent the presence of number n in cell (x, y). Since we have NxN number of cells that can contain any of the N unique numbers, we will have NxNxN number of variables, i.e., Vx,y,n with x, y, and n ranging from 1 thru N.</p>
+<p>We can rewrite the above constraints as follows.</p>
+<p>Each cell contains at least one copy of any number.</p>
+<img src="./CourSys - Programming Assignment 2_files/svg.latex">
+<p>Each cell contains at most one copy of any number.</p>
+<img src="./CourSys - Programming Assignment 2_files/svg(1).latex">
+<p>No two fields in any column contain the same value.</p>
+<img src="./CourSys - Programming Assignment 2_files/svg(2).latex">
+<p>No two fields in any row contain the same value</p>
+<img src="./CourSys - Programming Assignment 2_files/svg(3).latex">
+<p>Now we just need to include constraints that restrict cells that were labeled in the puzzle grid to keep that label. Let</p>
+<pre><code>S:={(i,j,k):cell (i,j) has label k in puzzle grid}.
+</code></pre>
+<p>Then the formula</p>
+<img src="./CourSys - Programming Assignment 2_files/svg(4).latex">
+<p>ensures that the solution matches the original puzzle.</p>
+<p><strong>Putting it all together</strong></p>
+<p>So given a puzzle the formula</p>
+<img src="./CourSys - Programming Assignment 2_files/svg(5).latex">
+<p>is satisfied if and only if the variables vi,j,k describe a solution to the puzzle. Cell (i,j) is labeled k if and only if vi,j,k is true.</p>
+<p><strong>Q1(4 points)</strong></p>
+<p>Your job is to write a Python program that constructs the CNF formula C in Dimacs format from a sudoku grid.</p>
+<p>Complete the empty function toCNF in sudoku.py. The function toCNF takes three arguments: the number N, an instance of sudoku of size NxN, and a string (for the name of output file).</p>
+<p>For example, the instance for the picture above looks like this:</p>
+<pre><code>5 3 0 0 7 0 0 0 0
+6 0 0 1 9 5 0 0 0
+0 9 8 0 0 0 0 6 0
+8 0 0 0 6 0 0 0 3
+4 0 0 8 0 3 0 0 1
+7 0 0 0 2 0 0 0 6
+0 6 0 0 0 0 2 8 0
+0 0 0 4 1 9 0 0 5
+0 0 0 0 8 0 0 7 9
+</code></pre>
+<p>We use 0 to represent unoccupied cells.</p>
+<p>After running the following commands</p>
+<pre lang="python" class="highlight lang-python hljs"><code>python sudoku.py -n <span class="hljs-number">3</span> -i sudoku3_unsat.txt
+python sudoku.py -n <span class="hljs-number">5</span> 
+python sudoku.py -n <span class="hljs-number">9</span> -i sudoku9.txt
+</code></pre>
+<p>Your code should quickly generate three files:</p>
+<pre><code>sudoku3_unsat.txt3.cnf
+5.cnf
+sudoku9.txt9.cnf
+</code></pre>
+<p>Notice that it's ok to not specify an input instance, we will treat it as if we are inputting a file of all 0's.</p>
+<p>We have included a binary executable of MiniSat solver for Linux.
+The MiniSat SAT solver is one of the fastest SAT solvers currently available.</p>
+<p>You can check your encodings by:</p>
+<pre><code>./MiniSat_v1.14_linux sudoku3_unsat.txt3.cnf
+./MiniSat_v1.14_linux 5.cnf
+./MiniSat_v1.14_linux sudoku9.txt9.cnf
+</code></pre>
+<p>If your encoding is correct, only the first one is unsatisfiable. Feel free to do more testing with your own sudoku instances.</p>
+<p>Every file generated by this command should be satisfiable:</p>
+<pre lang="python" class="highlight lang-python hljs"><code>python sudoku.py -n N
+</code></pre>
+<p>where N is any positive integer.</p>
+<p><strong>Remember</strong> You must include a line with a lower case "p" followed by a space, followed by "cnf", followed by the number of variables followed by the number of clauses before adding any CNF clauses.</p>
+<h2>Part 2 DPLL SAT Solver</h2>
+<p>In this part, you will implement a basic DPLL SAT-solver in Python.</p>
+<p>As a refresher—the motivation for a SAT solver is to determine if, for a given boolean formula, there exists an assignment of true and false to the variables such that the entire formula evaluates to true. Algorithms that solve the boolean satisfiability problem are employed by formal verification tools under-the-hood to determine the satisfiability of higher-level constraint models. In general, efficient SAT-solving is an extremely important and widely-used problem in computer science.</p>
+<p>DPLL expects as input a formula in conjunctive normal form, i.e., a set of clauses that are joined together with “and”. This means that to satisfy the input clause set, every clause must be satisfied. We call a clause with only one literal a “unit clause” and a clause with no literals the “empty clause”, which is the same as falsehood. A literal is “pure” if, whenever it appears in the clause set, it always has the same sign. A set of unit clauses is consistent if no two have different signs for the same variable.</p>
+<p><strong>Input Specification</strong></p>
+<p>Your program should take in a formula in DIMACS CNF file format, where a formula is a list of clauses separated by 0s and each clause is a list of literals separated by spaces. Literals are non-zero numbers where a positive number denotes that the variable must be true and a negative number denotes it must be false. There is an implicit “or” between each literal and an implicit “and” between clauses.</p>
+<p>In DPLLsat.py, we've provided the template for one possible implementation of reading input and internal clauses representation in python. Feel free to use it directly or implement your own.</p>
+<p><strong>Unit Propagation</strong></p>
+<p>The DPLL algorithm works by choosing an assignment of true or false for a variable, simplifying the formula based on that choice, then recursively checking the satisfiability of the simplified formula.</p>
+<p>First, we’ll implement unit propagation, which is one aspect of this formula simplification. If a clause is a unit clause (one with only one variable), then the only way for the formula to be satisfiable is for that variable to be assigned consistently with its sign in that clause. Thus, we know that variable must take on that assignment, which tells us that all other clauses with that literal are now satisfied. In addition, we know that clauses with the literal’s negation will not be satisfied by that component, so we can remove the negation from all clauses.</p>
+<p>The pseudocode for propagate-units is included below. First, write out a few test cases with your internal representation, and discuss them with a TA or another student. Then, implement and test this function.</p>
+<pre lang="python" class="highlight lang-python hljs"><code>propagate-units(F):
+    <span class="hljs-keyword">for</span> each unit clause {+/-x} <span class="hljs-keyword">in</span> F
+        remove all non-unit clauses containing +/-x
+        remove all instances of -/+x <span class="hljs-keyword">in</span> every clause // flipped sign!
+</code></pre>
+<p><strong>Pure Literal Elimination</strong></p>
+<p>The second aspect of formula simplification is eliminating pure literals (ones that occur with only one polarity throughout the formula). If a literal is pure, then each clause it appears in can be satisfied by assigning the variable consistent to the sign it appears with. Thus, without changing the satisfiability of the formula, we can add the pure literal as a unit clause and remove all other clauses is occurs in from the formula.</p>
+<p>The pseudocode for pure-elim is included below. Again, write out some test cases and discuss them with a TA or another student. Then, implement and test this function.</p>
+<pre lang="c" class="highlight lang-c hljs cpp"><code>pure-elim(F):   
+    <span class="hljs-keyword">for</span> each variable x
+        <span class="hljs-keyword">if</span> +/-x is pure in F
+            remove all clauses containing +/-x
+            add a unit clause {+/-x}
+</code></pre>
+<p><strong>Recursive Backtracking</strong></p>
+<p>After the DPLL employs these two simplification steps, it must pick some variable to branch on. The satisfiability problem is then split into two sub-problems: whether the formula is satisfiable with the chosen variable assigned as either true or false. Essentially, the algorithm “guesses” a variable to be true, recursively determines if that subproblem is satisfiable; if it is not, the algorithm then “guesses” the variable to be false and tries again.</p>
+<p>You’re free to choose any reasonable method of picking variables to branch on. You might randomly select a variable, pick the variable that occurs the most in the formula, or even just take the alphabetically-next variable. By “reasonable” we mean a method that leads to correct results.</p>
+<p>Note that if you do not include “involves all VARS” in the check below, DPLL will return a partial instance that potentially omits values for some variables that were removed in simplification steps. Since we’re changing the formula recursively, we need to remember the original set of variables (VARS).</p>
+<pre lang="c" class="highlight lang-c hljs cpp"><code>solve(VARS, F):
+    F := propagate-units(F)
+    F := pure-elim(F)
+    <span class="hljs-keyword">if</span> F contains the empty clause, <span class="hljs-keyword">return</span> the empty clause <span class="hljs-comment">// call this "unsat" in output</span>
+    <span class="hljs-keyword">if</span> F is a consistent <span class="hljs-built_in">set</span> of unit clauses that involves all VARS, <span class="hljs-keyword">return</span> F
+    x := pick-a-variable(F) <span class="hljs-comment">// do anything reasonable here</span>
+    <span class="hljs-keyword">if</span> solve(VARS, F + {x}) isn't the empty clause, <span class="hljs-keyword">return</span> solve(VARS, F + {x}) <span class="hljs-comment">// works to have +x</span>
+    <span class="hljs-keyword">else</span> <span class="hljs-keyword">return</span> solve(VARS, F + {-x}) <span class="hljs-comment">// check -x</span>
+</code></pre>
+<p><strong>Q2 (6 points)</strong></p>
+<p>Implement the DPLL algorithm in DPLLsat.py.</p>
+<p>You should be able to run your solver by:</p>
+<pre lang="python" class="highlight lang-python hljs"><code>python DPLLsat.py -i &lt;inputCNFfile&gt; 
+</code></pre>
+<p>or</p>
+<pre lang="python" class="highlight lang-python hljs"><code>python DPLLsat.py -i &lt;inputCNFfile&gt; -v 
+</code></pre>
+<p>if you want to see the solution.</p>
+<p><strong>OUTPUT specification:</strong></p>
+<p>Your program should print “UNSAT” if a formula is unsatisfiable and "SAT" if it is satisfiable.</p>
+<p>Additionally, if verbosity is set to Ture, and the formula is satisfiable, the program should also print the solution in the form:</p>
+<pre lang="python" class="highlight lang-python hljs"><code>list of true literals
+list of false literals
+</code></pre>
+<p>where each literal is separated by a space and there is a newline between lists.</p>
+<p>Verify your solver with the Minisat. Both solvers should output the same satisibility result for the same cnf instance.</p>
+<h3>(Optional) Sudoku solving contest (bonus 2 points)</h3>
+<p>The course contest involves solving the largest sudoku instance you can in 5 minutes.</p>
+<p><strong>Getting Started</strong></p>
+<p>You have 5 minutes to</p>
+<ol>
+<li>Generate a sudoku instance by:</li>
+</ol>
+<pre lang="python" class="highlight lang-python hljs"><code>python sudoku.py -n N
+</code></pre>
+<ol start="2">
+<li>Use your SAT solver to solve the problem:</li>
+</ol>
+<pre lang="python" class="highlight lang-python hljs"><code>python DPLLsat.py -i N.cnf 
+</code></pre>
+<p>where N is a positive number.</p>
+<p><strong>What to submit</strong></p>
+<p>Put your modified sat solver and/or modified sudoku encoder in the contest folder.</p>
+<p>Also, include a result.txt that reports the largest N you can solve in 5 minutes. You will also need to provide a brief description of what you did and include relevant references.</p>
+<p><strong>Restrictions</strong></p>
+<p>You are free to modify the DPLL solver. You can also work on improving the encoding of the Sudoku game. It's ok to implement advanced DPLL algorithms you found from internet/academic papers, but you need to provide the reference to them and write every line of the code by yourself!</p>
+<p>Multi-threading and CUDA are allowed.</p>
+<p>WARNING: SAT solver optimization is a very time-consuming job. Please do so only if you have the interest and time!</p>
+<p><strong>Academic Dishonesty</strong></p>
+<p>While we won't validate your result, we still expect you not to falsely represent your work. Please don't let us down.</p>
+<h2>Part 3 Feedback</h2>
+<p>Give one short piece of feedback about the course so far. What
+have you found most interesting? Is there a topic that you had trouble understanding? Are there any changes that could improve the value of the
+course to you?</p>
+<p>How many hours did you spend on this assignment?</p>
+<p>Please provide your answers in sudoku.py.</p>
+<p>*Instruction for DPLL SAT solver is adopted from the Logic for Systems course offered at Brown University.</p></div>
+
+<div class="updateinfo">Updated Wed Feb. 13 2019, 17:52 by liuhengl.
+
+</div>
+
+
+          </div>
+
+          <div class="inherited-parsys below-main"></div>
+        </section>
+
+        <footer>
+            <div>CourSys is hosted by <a href="https://www.sfu.ca/computing.html">SFU Computing Science</a>.</div>
+          <ul>
+            <li><a href="http://www.sfu.ca/admission">Admission</a></li>
+            <li><a href="http://www.sfu.ca/programs">Programs</a></li>
+            <li><a href="http://www.sfu.ca/learning">Learning</a></li>
+            <li><a href="http://www.sfu.ca/research-at-sfu">Research</a></li>
+            <li><a href="http://www.sfu.ca/sfu-community">Community</a></li>
+            <li><a href="http://www.sfu.ca/about">About</a></li>
+          </ul>
+          <ul>
+            <li><a href="http://www.sfu.ca/campuses/maps.html">Maps + directions</a></li>
+            <li><a href="http://www.lib.sfu.ca/">Library</a></li>
+            <li><a href="http://www.sfu.ca/calendar">Academic Calendar</a></li>
+            <li><a href="http://www.sfu.ca/roads">Road Report</a></li>
+            <li><a href="http://www.sfu.ca/advancement">Give to SFU</a></li>
+          </ul>
+
+          <ul>
+            <li class="header">Connect with us</li>
+            <li>
+              <div class="inherited-parsys connect-with-us">
+                <div class="parsys">
+                  <div class="text parbase section">
+                    <div class="">
+                      <p><a href="http://www.facebook.com/simonfraseruniversity">Facebook</a><br>
+                      <a href="http://www.twitter.com/sfu">Twitter</a><br>
+                      <a href="http://www.youtube.com/user/SFUNews">YouTube</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <ul>
+            <li class="header"><a href="http://www.sfu.ca/clf/contact.html">Contact us</a></li>
+
+            <li>
+              <div class="inherited-parsys contact-us">
+                <div class="parsys">
+                  <div class="text parbase section">
+                    <div class="">
+                      <p>Simon Fraser University<br>
+                      8888 University Drive<br>
+                      Burnaby, B.C.<br>
+                      Canada V5A 1S6</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <ul>
+            <li><div class="inherited-parsys footer-right"></div></li>
+            <li><a href="http://www.sfu.ca/contact/terms-conditions.html">Terms and conditions</a></li>
+            <li>© Simon Fraser University</li>
+          </ul>
+        </footer>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="./CourSys - Programming Assignment 2_files/082e84ea9840.js.download"></script>
+
+
+</body></html>

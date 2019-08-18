@@ -1,0 +1,53 @@
+cmpt 295 assignment 1 
+khizr ali pardhan 
+
+0. done*
+1. done* 
+2. emulator
+3. 
+	a) 
+	for(int n=0;n<16;n++)
+    printf("The return value was:  %d.\n", mystery(str,n));
+    n from 0..15 is: 
+     n= 0:0
+	 n= 1:0
+	 n= 2:1
+	 n= 3:2
+	 n= 4:2
+	 n= 5:2
+	 n= 6:2
+	 n= 7:3
+	 n= 8:4
+	 n= 9:4
+	 n= 10:4
+	 n= 11:4
+	 n= 12:5
+	 n= 13:6
+	 n= 14:6
+	 n= 15:6
+
+	b) we give a string and a whole number, and we receive number 
+	c) decrementation variable for a loop
+	d) in the code we decrement %rcx and then we "cmpb	$0x6f, (%rcx)". which means we are searching a lower memory address. 
+
+	so in terms of memory address we are going downwards. 
+
+
+
+4. 
+
+	mov $0, %eax    # make eax 0
+	mov $0, %ecx	# make ecx 0
+
+loop:   # " a lable is an address"
+
+# compare  %ecx ,%esi, if true end the loop 
+	cmpl %ecx ,%esi 
+	jle endloop
+	addl %edi,%eax #  a+b ( we do this b number of times )
+	incl %ecx # increment 
+	jmp loop # do all the above, one more time (1 more iteration)
+
+endloop:
+
+	ret     # ret %eax 

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Doodle Jump</title>
+    <script src="doodle jump.js" type="text/javascript" defer></script>
+
+
+    <style>
+        .button {
+
+            background: #0aff3b;
+            background-image: -webkit-linear-gradient(top, #0aff3b, #54961e);
+            background-image: -moz-linear-gradient(top, #0aff3b, #54961e);
+            background-image: -ms-linear-gradient(top, #0aff3b, #54961e);
+            background-image: -o-linear-gradient(top, #0aff3b, #54961e);
+            background-image: linear-gradient(to bottom, #0aff3b, #54961e);
+            -webkit-border-radius: 28;
+            -moz-border-radius: 28;
+            border-radius: 28px;
+            font-family: Arial;
+            color: #ffffff;
+            font-size: 17px;
+            padding: 10px 20px 10px 20px;
+            text-decoration: none;
+        }
+
+        .button:hover {
+            background: #ff0088;
+            background-image: -webkit-linear-gradient(top, #ff0088, #b0003b);
+            background-image: -moz-linear-gradient(top, #ff0088, #b0003b);
+            background-image: -ms-linear-gradient(top, #ff0088, #b0003b);
+            background-image: -o-linear-gradient(top, #ff0088, #b0003b);
+            background-image: linear-gradient(to bottom, #ff0088, #b0003b);
+            text-decoration: none;
+        }
+
+        .a {
+            vertical-align: bottom;
+
+        }
+
+
+    </style>
+</head>
+
+<body>
+<h2 id="lvlID"> level 1</h2>
+
+<audio controls id="a" class="a">
+    <source src="Suleiman the Magnificent The Lawgiver - Extra History.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+<button type="button" class="button" onclick="speedUp">speed up!</button>
+
+<div style="position: relative;">
+
+
+    <canvas id="layer1" width="800" height="800" style="position: absolute; left: 0; top: 0; z-index: 0;"></canvas>
+
+
+    <canvas id="myCanvas" height="800" width="800" style="position: absolute; left: 0; top: 0; z-index: 1;"></canvas>
+
+</div>
+
+<!--
+<iframe width="420" height="315" src="http://www.youtube.com/embed/
+qIMtRiNCRXU?autoplay=1&cc_load_policy=1" frameborder="3"
+ 
+    allowfullscreen></iframe> -->
+
+
+</body>
+
+</html>

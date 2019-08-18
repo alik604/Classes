@@ -1,0 +1,133 @@
+﻿	.globl conv_arr
+conv_arr:
+#OL for pram regs: rdi,rsi,rdx,rcx,r8,r9...stack 
+
+# x* is rdi 
+# n is rsi 
+# h* is rdx
+# m is rcx 
+ 
+	xorq %rax,%rax
+	addq %rsi,%rax
+	addq %rcx,%rax
+	subq $1,%rax
+
+    xorq %r15,%r15 
+    movq $0,%r15 # i=0
+
+loop: # back for r15 and r14 
+
+
+    cmpq %r15,%rax 
+    jge end #error? 
+
+	push %rdi
+	push %rsi
+	push %rdx
+	push %rcx 
+    push %rax 
+	push %r8 
+
+	
+	#pram 1 
+	movq %r15,%rdi
+	incq %rdi 
+	#pram 2 
+	movq %rcx,%rsi 
+
+	call min 
+	#rax has the result 
+
+	movq %rax, %r14########################################################## 
+
+	movq %rcx, %rax 
+	addq %rsi,%rax 
+	subq %rdi, %rax #rax = M+N-(i+1)
+	movq %rax,%rdi 
+	#rdi = M+N-(i+1), rsi = m 
+	call min 
+
+	movq %rcx,%r9 # r9 = m 
+	subq %rax, %r9 # r9 = m - returnedValue 
+
+
+
+#restore values 
+	pop %r8 
+	pop %rax #max loop 
+	pop %rcx 
+	pop %rdx 
+	pop %rsi 
+	pop %rdi 
+#back them up 
+	push %rdi
+	push %rsi
+	push %rdx
+	push %rcx 
+	push %rax
+	push %r8 
+ 
+
+
+## call conv 
+
+#r8 is ladj, r9 is radj 	
+
+# x* is rdi 
+# n is rsi 
+# h* is rdx
+# m is rcx 
+
+
+
+	movq %r15,%rax
+	incq %rax 
+	subq %r14,%rax  # (i+1) - ladj 
+	movq -1(%rdi,%r15,1),%rdi #rdi is x[i]
+	addq %rax, %rdi 
+	####################### pram 1 is ready 
+
+
+
+
+	movq -1(%rdx,%r15,1),%rdx #rdx is h[i]
+	addq %r9,%rdx
+	movq %rdx, %rsi
+	####################### pram 2 is ready 
+
+	movq %r14, %rdx #rdx= ladj
+	subq %r9, %rdx # rdx = ladj - radj  
+	####################### pram 3 is ready 
+
+	call conv
+
+	#result[i] = rax 
+
+	movb $2,%al
+	movq $2,%r15
+
+	movb %al,-4(%r8,%r15,1) #rdx is h[i]
+
+	#  is the 5th pram, i forgot to save it
+
+
+
+
+	pop %r8 
+	pop %rax #max loop 
+	pop %rcx 
+	pop %rdx 
+	pop %rsi 
+	pop %rdi 
+
+
+
+    incq %r15
+    jmp loop 
+
+
+	
+
+end: 
+	ret
+

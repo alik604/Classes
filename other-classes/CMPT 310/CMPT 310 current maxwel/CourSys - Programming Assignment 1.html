@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)https://coursys.sfu.ca/2019sp-cmpt-310-d1/pages/a1 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="origin">
+  <title>CourSys - Programming Assignment 1</title>
+  <link rel="stylesheet" href="./CourSys - Programming Assignment 1_files/c1831ff6795b.css" type="text/css">
+
+  <script type="text/javascript" src="./CourSys - Programming Assignment 1_files/5ab08557caed.js.download"></script>
+
+  <!--[if lt IE 9]>
+  <script type="text/javascript" src="/static/CACHE/js/216d122e438b.js"></script>
+  <![endif]-->
+  <!--[if lte IE 9]>
+  <script type="text/javascript" src="/static/CACHE/js/129a85805671.js"></script>
+  <![endif]-->
+
+  <link rel="icon" href="https://coursys.sfu.ca/static/icons/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="https://coursys.sfu.ca/static/icons/favicon.ico" type="image/x-icon">
+
+  
+
+
+<script src="./CourSys - Programming Assignment 1_files/mathjax-config.js.download"></script>
+<script src="./CourSys - Programming Assignment 1_files/latest.js.download" referrerpolicy="no-referrer"></script><script type="text/javascript" async="" src="./CourSys - Programming Assignment 1_files/MathJax.js.download"></script>
+<script type="text/javascript" src="./CourSys - Programming Assignment 1_files/ab3c4783901b.js.download"></script>
+<link rel="stylesheet" href="./CourSys - Programming Assignment 1_files/vs.css">
+
+<style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuRadioCheck.RTL {right: 1em; left: auto}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover, .MJXp-munder {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > *, .MJXp-munder > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style></head>
+
+<body><div id="MathJax_Message" style="display: none;"></div>
+  <div id="container" class="">
+    <div id="page">
+      <header>
+        <button class="toggle-search-control">Search</button>
+        <section class="heading">
+          <div class="brand-title">
+            <a href="http://www.sfu.ca/">
+            <div class="branding">
+              <h1>Simon Fraser University<br>Engaging the World</h1>
+            </div></a> <!-- end branding -->
+            <div class="site-title"><h2><a href="https://coursys.sfu.ca/">CourSys</a></h2></div>
+          </div>
+        </section>
+        <section class="actionable-header ab-yes">
+          <div class="search">
+            <form action="https://coursys.sfu.ca/search" method="get">
+              <fieldset class="search-field">
+                <span class="searchlabel"><a href="https://coursys.sfu.ca/docs/search">Search</a> for students, courses, discussion, pages:</span>
+                <input type="search" placeholder="Search for students, discussion, etc." name="q">
+              </fieldset>
+
+              <fieldset class="search-scope-set">
+                <label><input type="radio" checked="checked" value="site" name="search-scope">This site</label>
+                <label><input type="radio" value="sfu" name="search-scope">SFU.ca</label>
+              </fieldset>
+            </form>
+          </div>
+          <div class="global-links">
+            <div class="mobile-global-links-container">
+              <ul class="mobile-global-links">
+                <li class="header">
+                  <a href="http://www.sfu.ca/directory">A-Z <span>directory</span></a>
+                </li>
+
+                <li class="header sign-in">
+                  
+                    <a href="https://coursys.sfu.ca/logout/">Sign Out</a>
+				  
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </header>
+
+      <div class="header-divider">
+            <div id="sysmenu">
+			
+			Logged in as kpardhan. <a href="https://coursys.sfu.ca/logout/">Logout</a>
+			
+			</div>
+      </div><!-- end header-divider -->
+
+      <div id="page-content" class="two-column">
+
+        
+        <div class="subnav-wrapper">
+          
+
+
+        </div>
+        
+
+        <div class="breadcrumb">
+        <ul><li><a href="https://coursys.sfu.ca/">CourSys</a></li><li><a href="https://coursys.sfu.ca/2019sp-cmpt-310-d1/">CMPT 310 D1</a></li><li><a href="https://coursys.sfu.ca/2019sp-cmpt-310-d1/pages/">Pages</a></li><li>A1</li></ul>
+        </div>
+
+        <div class="mobile-sub-nav">
+          <div class="mobile-sub-menu"></div>
+        </div>
+
+        <section class="main">
+          <div class="inherited-parsys above-main">
+            
+            
+          </div>
+
+          <div class="parsys main_content">
+            <div class="title section">
+              <div>
+                <h1>Programming Assignment 1</h1>
+              </div>
+            </div>
+
+            
+
+
+
+
+<div class="wikicontents markdown tex2jax_ignore"><p>In this assignment, your Pac-Man agent will find paths through his maze world, both to reach a particular location and to collect food efficiently. You will build general search algorithms and apply them to Pac-Man scenarios.</p>
+<p>The code for this project consists of several Python files, some of which you will need to read and understand in order to complete the assignment, and some of which you can ignore. You can download all the code as a zip <a href="https://coursys.sfu.ca/2019sp-cmpt-310-d1/pages/A1.zip/view">here</a>.</p>
+<p><strong>Files you'll edit</strong>:</p>
+<p><strong>For Q1.1, Q1.2, and Q1.3:</strong></p>
+<pre>search.py	   Where all of your search algorithms will reside.
+</pre>
+<p><strong>For Q2.1, Q2.2</strong></p>
+<pre>searchAgents.py  Where all of your search-based agents will reside.
+</pre>
+<p><strong>Files you might want to look at:</strong></p>
+<pre>pacman.py	The main file that runs Pac-Man games.
+ This file describes a Pac-Man GameState type, which you use in this project.
+game.py	   The logic behind how the Pac-Man world works.
+ This file describes several supporting types like AgentState, Agent, Direction, and Grid.
+util.py	    Useful data structures for implementing search algorithms.
+</pre>
+<p><strong>Supporting files you can ignore:</strong></p>
+<pre>graphicsDisplay.py	Graphics for Pac-Man
+graphicsUtils.py	Support for Pac-Man graphics
+textDisplay.py	    ASCII graphics for Pac-Man
+ghostAgents.py	   Agents to control ghosts
+keyboardAgents.py	Keyboard interfaces to control Pac-Man
+layout.py	 Code for reading layout files and storing their contents
+</pre>
+<p><strong>What to submit</strong>: You will fill in portions of search.py and searchAgents.py during the assignment. You should submit these two files (only) to CourSYS.</p>
+<p><strong>Evaluation</strong>: Your code will be autograded for technical correctness. Please do not change the names of any provided functions or classes within the code, or you will wreak havoc on the autograder. However, the correctness of your implementation -- not the autograder's output -- will be the final judge of your score. If necessary, we will review and grade assignments individually to ensure that you receive due credit for your work.</p>
+<p><strong>Academic Dishonesty</strong>: We will be checking your code against other submissions in the class for logical redundancy. We trust you all to submit your own work only; please don't let us down. If you do, we will pursue the strongest consequences available to us.</p>
+<p><strong>Getting Help</strong>: You are not alone! If you find yourself stuck on something, contact the TAs for help. The TAs will have additional office hours before the assignment is due.   Alternatively, you can post your questions to Piazza.</p>
+<p>We want these projects to be rewarding and instructional, not frustrating and demoralizing. But, we don't know when or how to help unless you ask.</p>
+<p>One more piece of advice: if you don't know what a variable does or what kind of values it takes, print it out.</p>
+<h2>Part 0 Welcome to Pac-Man</h2>
+<p>After downloading the code (<a href="https://coursys.sfu.ca/2019sp-cmpt-310-d1/pages/A1.zip/view">A1.zip</a>), unzipping it and changing to the A1 directory, you should be able to play a game of Pac-Man by typing the following at the command line:</p>
+<pre lang="python" class="highlight lang-python hljs"><code>python pacman.py
+</code></pre>
+<p><strong>Note</strong>: Make sure you are running a recent version of Python (3.6 or later). Depend on your system configuration, You may need to use python3 instead of python to run this program.</p>
+<p>Pac-Man lives in a shiny blue world of twisting corridors and tasty round treats. Navigating this world efficiently will be Pac-Man's first step in mastering his domain.
+The simplest agent in searchAgents.py is called the <em>GoWestAgent</em>, which always goes West (a trivial reflex agent). This agent can occasionally win:</p>
+<pre lang="python" class="highlight lang-python hljs"><code>python pacman.py --layout testMaze --pacman GoWestAgent
+</code></pre>
+<p>But, things get ugly for this agent when turning is required:</p>
+<pre lang="python" class="highlight lang-python hljs"><code>python pacman.py --layout tinyMaze --pacman GoWestAgent
+</code></pre>
+<p>If pacman gets stuck, you can exit the game by typing CTRL-c into your terminal. Soon, your agent will solve not only tinyMaze, but any maze you want. Note that pacman.py supports a number of options that can each be expressed in a long way (e.g., --layout) or a short way (e.g., -l). You can see the list of all options and their default values via:</p>
+<pre lang="python" class="highlight lang-python hljs"><code>python pacman.py -h
+</code></pre>
+<h2>Part 1 Finding a Fixed Food Dot using Search Algorithms</h2>
+<p>In searchAgents.py,  you'll find a fully implemented <em>SearchAgent</em>, which plans out a path through Pac-Man's world and then executes that path step-by-step. The search algorithms for formulating a plan are not implemented -- that's your job. First, test that the <em>SearchAgent</em> is working correctly by running:</p>
+<pre lang="python" class="highlight lang-python hljs"><code>python pacman.py -l tinyMaze -p SearchAgent -a fn=tinyMazeSearch
+</code></pre>
+<p>The command above tells the <em>SearchAgent</em> to use <em>tinyMazeSearch</em> as its search algorithm, which is implemented in search.py. Pac-Man should navigate the maze successfully.</p>
+<p>Now it's time to write full-fledged generic search functions to help Pac-Man plan routes! Pseudocode for the search algorithms you'll write can be found in the lecture slides and textbook. Remember that a search node must contain not only a state but also the information necessary to reconstruct the path (plan) which gets to that state.</p>
+<p><strong>Important note</strong>: All of your search functions need to return a <strong>list</strong> of actions that will lead the agent from the start to the goal. These actions all have to be legal moves (valid directions, no moving through walls).</p>
+<p>Hint: Make sure to check out the <em>Stack</em>, <em>Queue</em> and <em>PriorityQueue</em> types provided to you in util.py!</p>
+<h3>Question 1.1 (2 points)</h3>
+<p>Implement the depth-first search (DFS) algorithm in the <em>depthFirstSearch</em> function in search.py . To make your algorithm complete, write the graph search version of DFS, which avoids expanding any already visited states (R&amp;N 3ed Section 3.3, Figure 3.7).
+Your code should quickly find a solution for:</p>
+<pre lang="python" class="highlight lang-python hljs"><code>python pacman.py -l tinyMaze -p SearchAgent
+python pacman.py -l mediumMaze -p SearchAgent
+python pacman.py -l bigMaze -z <span class="hljs-number">.5</span> -p SearchAgent
+</code></pre>
+<p>The Pac-Man board will show an overlay of the states explored, and the order in which they were explored (brighter red means earlier exploration). Is the exploration order what you would have expected? Does Pac-Man actually go to all the explored squares on his way to the goal?</p>
+<p>Hint: If you use a Stack as your data structure, the solution found by your DFS algorithm for mediumMazeshould have a length of 130 (provided you push successors onto the fringe in the order provided by getSuccessors; you might get 244 if you push them in the reverse order). Is this a least cost solution? If not, think about what depth-first search is doing wrong.</p>
+<h3>Question 1.2 (2 points)</h3>
+<p>Implement the breadth-first search (BFS) algorithm in the <em>breadthFirstSearch</em> function in  search.py . Again, write a graph search algorithm that avoids expanding any already visited states. Test your code the same way you did for depth-first search.</p>
+<pre lang="python" class="highlight lang-python hljs"><code>python pacman.py -l mediumMaze -p SearchAgent -a fn=bfs
+python pacman.py -l bigMaze -p SearchAgent -a fn=bfs -z <span class="hljs-number">.5</span>
+</code></pre>
+<p>Does BFS find a least cost solution? If not, check your implementation.</p>
+<p>Hint: If Pac-Man moves too slowly for you, try the option --frameTime 0.</p>
+<p>Note: If you've written your search code generically, your code should work equally well for the eight-puzzle search problem (R&amp;N 3ed Section 3.2, Figure 3.4) without any changes.</p>
+<pre lang="python" class="highlight lang-python hljs"><code>python eightpuzzle.py
+</code></pre>
+<h3>Question 1.3 (2 points)</h3>
+<p>Implement A* graph search in the empty function <em>aStarSearch</em> in  search.py . A* takes a heuristic function as an argument. Heuristics take two arguments: a state in the search problem (the main argument), and the problem itself (for reference information). The <em>nullHeuristic</em> heuristic function in  search.py  is a trivial example.
+You can test your A* implementation on the original problem of finding a path through a maze to a fixed position using the Manhattan distance heuristic (implemented already as <em>manhattanHeuristic</em> in  searchAgents.py ).</p>
+<pre lang="python" class="highlight lang-python hljs"><code>python pacman.py -l bigMaze -z <span class="hljs-number">.5</span> -p SearchAgent -a fn=astar,heuristic=manhattanHeuristic 
+</code></pre>
+<h2>Part 2 Finding All the Corners</h2>
+<p>The real power of A* will only be apparent with a more challenging search problem. Now, it's time to formulate a new problem and design a heuristic for it.</p>
+<p>In corner mazes, there are four dots, one in each corner. Our new search problem is to find the shortest path through the maze that touches all four corners (whether the maze actually has food there or not). Note that for some mazes like <em>tinyCorners</em>, the shortest path does not always go to the closest food first!</p>
+<p>Hint: the shortest path through <em>tinyCorners</em> takes 28 steps.</p>
+<h3>Question 2.1 (3 points)</h3>
+<p>Implement the <em>CornersProblem</em> search problem in searchAgents.py. You will need to choose a state representation that encodes all the information necessary to detect whether all four corners have been reached. Now, your search agent should solve:</p>
+<pre lang="python" class="highlight lang-python hljs"><code>python pacman.py -l tinyCorners -p SearchAgent -a fn=bfs,prob=CornersProblem
+python pacman.py -l mediumCorners -p SearchAgent -a fn=bfs,prob=CornersProblem
+</code></pre>
+<p>To receive full credit, you need to define an abstract state representation that does not encode irrelevant information (like the position of ghosts, where extra food is, etc.). In particular, do not use a Pac-Man GameState as a search state. Your code will be very, very slow if you do (and also wrong).</p>
+<p>Hint: The only parts of the game state you need to reference in your implementation are the starting Pac-Man position and the location of the four corners.</p>
+<p>Our implementation of <em>breadthFirstSearch</em> expands just under 2000 search nodes on <em>mediumCorners</em>. However, heuristics (used with A* search) can reduce the amount of searching required.</p>
+<h3>Question 2.2 (3 points)</h3>
+<p>Implement a heuristic for the CornersProblem in <em>cornersHeuristic</em>.</p>
+<p>Grading: inadmissible heuristics will get no credit. 1 point for any admissible heuristic. 1 point for expanding fewer than 1600 nodes. 1 point for expanding fewer than 1200 nodes. Expand fewer than 800, and you're doing great!</p>
+<pre lang="python" class="highlight lang-python hljs"><code>python pacman.py -l mediumCorners -p SearchAgent -a fn=aStarSearch,prob=CornersProblem,heuristic=cornersHeuristic -z <span class="hljs-number">0.5</span>
+</code></pre>
+<p><strong>Admissibility vs. Consistency</strong>: Remember, heuristics are just functions that take search states and return numbers that estimate the cost to the nearest goal. More effective heuristics will return values closer to the actual goal costs. To be admissible, the heuristic values must be lower bounds on the actual shortest path cost to the nearest goal (and non-negative). To be consistent, it must additionally hold that if an action has cost c, then taking that action can only cause a drop in heuristic of at most c.</p>
+<p>Remember that admissibility isn't enough to guarantee correctness in graph search -- you need the stronger condition of consistency. However, admissible heuristics are usually also consistent, especially if they are derived from problem relaxations. Therefore it is usually easiest to start out by brainstorming admissible heuristics. Once you have an admissible heuristic that works well, you can check whether it is indeed consistent, too. The only way to guarantee consistency is with a proof. However, inconsistency can often be detected by verifying that for each node you expand, its successor nodes are equal or higher in f-value. Moreover, if BFS and A* ever return paths of different lengths, your heuristic is inconsistent. This stuff is tricky!</p>
+<p><strong>Complexity</strong>:  heuristic must be sub-exponential in the size of the maze. Most reasonable heuristics are O(1) in the size of the maze.
+For example, a constant number of Manhattan distance calculation is O(1). Calling BFS to find the true cost to goal is exponential.</p>
+<p>You want a heuristic which reduces total compute time, though for this assignment the autograder will only check node counts (aside from enforcing a reasonable time limit).</p>
+<h2>Part 3 Feedback</h2>
+<p>Give one short piece of feedback about the course so far. What
+have you found most interesting? Is there a topic that you had trouble understanding? Are there any changes that could improve the value of the
+course to you?</p>
+<p>How many hours did you spend on this assignment?</p>
+<p>Please provide your answers in search.py.</p>
+<p>This assignment is adapted from the Pacman AI projects developed at UC Berkeley.<br>
+<a href="http://ai.berkeley.edu/project_overview.html">http://ai.berkeley.edu/project_overview.html</a></p></div>
+
+<div class="updateinfo">Updated Wed Jan. 23 2019, 20:43 by liuhengl.
+
+</div>
+
+
+          </div>
+
+          <div class="inherited-parsys below-main"></div>
+        </section>
+
+        <footer>
+            <div>CourSys is hosted by <a href="https://www.sfu.ca/computing.html">SFU Computing Science</a>.</div>
+          <ul>
+            <li><a href="http://www.sfu.ca/admission">Admission</a></li>
+            <li><a href="http://www.sfu.ca/programs">Programs</a></li>
+            <li><a href="http://www.sfu.ca/learning">Learning</a></li>
+            <li><a href="http://www.sfu.ca/research-at-sfu">Research</a></li>
+            <li><a href="http://www.sfu.ca/sfu-community">Community</a></li>
+            <li><a href="http://www.sfu.ca/about">About</a></li>
+          </ul>
+          <ul>
+            <li><a href="http://www.sfu.ca/campuses/maps.html">Maps + directions</a></li>
+            <li><a href="http://www.lib.sfu.ca/">Library</a></li>
+            <li><a href="http://www.sfu.ca/calendar">Academic Calendar</a></li>
+            <li><a href="http://www.sfu.ca/roads">Road Report</a></li>
+            <li><a href="http://www.sfu.ca/advancement">Give to SFU</a></li>
+          </ul>
+
+          <ul>
+            <li class="header">Connect with us</li>
+            <li>
+              <div class="inherited-parsys connect-with-us">
+                <div class="parsys">
+                  <div class="text parbase section">
+                    <div class="">
+                      <p><a href="http://www.facebook.com/simonfraseruniversity">Facebook</a><br>
+                      <a href="http://www.twitter.com/sfu">Twitter</a><br>
+                      <a href="http://www.youtube.com/user/SFUNews">YouTube</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <ul>
+            <li class="header"><a href="http://www.sfu.ca/clf/contact.html">Contact us</a></li>
+
+            <li>
+              <div class="inherited-parsys contact-us">
+                <div class="parsys">
+                  <div class="text parbase section">
+                    <div class="">
+                      <p>Simon Fraser University<br>
+                      8888 University Drive<br>
+                      Burnaby, B.C.<br>
+                      Canada V5A 1S6</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <ul>
+            <li><div class="inherited-parsys footer-right"></div></li>
+            <li><a href="http://www.sfu.ca/contact/terms-conditions.html">Terms and conditions</a></li>
+            <li>© Simon Fraser University</li>
+          </ul>
+        </footer>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="./CourSys - Programming Assignment 1_files/082e84ea9840.js.download"></script>
+
+
+</body></html>

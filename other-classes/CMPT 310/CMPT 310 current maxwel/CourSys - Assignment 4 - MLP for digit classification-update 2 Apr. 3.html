@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)https://coursys.sfu.ca/2019sp-cmpt-310-d1/pages/a4 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="origin">
+  <title>CourSys - Assignment 4 -  MLP for digit classification-update 2 Apr. 3</title>
+  <link rel="stylesheet" href="./CourSys - Assignment 4 - MLP for digit classification-update 2 Apr. 3_files/c1831ff6795b.css" type="text/css">
+
+  <script type="text/javascript" src="./CourSys - Assignment 4 - MLP for digit classification-update 2 Apr. 3_files/5ab08557caed.js.download"></script>
+
+  <!--[if lt IE 9]>
+  <script type="text/javascript" src="/static/CACHE/js/216d122e438b.js"></script>
+  <![endif]-->
+  <!--[if lte IE 9]>
+  <script type="text/javascript" src="/static/CACHE/js/129a85805671.js"></script>
+  <![endif]-->
+
+  <link rel="icon" href="https://coursys.sfu.ca/static/icons/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="https://coursys.sfu.ca/static/icons/favicon.ico" type="image/x-icon">
+
+  
+
+
+<script src="./CourSys - Assignment 4 - MLP for digit classification-update 2 Apr. 3_files/mathjax-config.js.download"></script>
+<script src="./CourSys - Assignment 4 - MLP for digit classification-update 2 Apr. 3_files/latest.js.download" referrerpolicy="no-referrer"></script><script type="text/javascript" async="" src="./CourSys - Assignment 4 - MLP for digit classification-update 2 Apr. 3_files/MathJax.js.download"></script>
+<script type="text/javascript" src="./CourSys - Assignment 4 - MLP for digit classification-update 2 Apr. 3_files/ab3c4783901b.js.download"></script>
+<link rel="stylesheet" href="./CourSys - Assignment 4 - MLP for digit classification-update 2 Apr. 3_files/vs.css">
+
+<style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuRadioCheck.RTL {right: 1em; left: auto}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover, .MJXp-munder {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > *, .MJXp-munder > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style></head>
+
+<body><div id="MathJax_Message" style="display: none;"></div>
+  <div id="container" class="">
+    <div id="page">
+      <header>
+        <button class="toggle-search-control">Search</button>
+        <section class="heading">
+          <div class="brand-title">
+            <a href="http://www.sfu.ca/">
+            <div class="branding">
+              <h1>Simon Fraser University<br>Engaging the World</h1>
+            </div></a> <!-- end branding -->
+            <div class="site-title"><h2><a href="https://coursys.sfu.ca/">CourSys</a></h2></div>
+          </div>
+        </section>
+        <section class="actionable-header ab-yes">
+          <div class="search">
+            <form action="https://coursys.sfu.ca/search" method="get">
+              <fieldset class="search-field">
+                <span class="searchlabel"><a href="https://coursys.sfu.ca/docs/search">Search</a> for students, courses, discussion, pages:</span>
+                <input type="search" placeholder="Search for students, discussion, etc." name="q">
+              </fieldset>
+
+              <fieldset class="search-scope-set">
+                <label><input type="radio" checked="checked" value="site" name="search-scope">This site</label>
+                <label><input type="radio" value="sfu" name="search-scope">SFU.ca</label>
+              </fieldset>
+            </form>
+          </div>
+          <div class="global-links">
+            <div class="mobile-global-links-container">
+              <ul class="mobile-global-links">
+                <li class="header">
+                  <a href="http://www.sfu.ca/directory">A-Z <span>directory</span></a>
+                </li>
+
+                <li class="header sign-in">
+                  
+                    <a href="https://coursys.sfu.ca/logout/">Sign Out</a>
+				  
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </header>
+
+      <div class="header-divider">
+            <div id="sysmenu">
+			
+			Logged in as kpardhan. <a href="https://coursys.sfu.ca/logout/">Logout</a>
+			
+			</div>
+      </div><!-- end header-divider -->
+
+      <div id="page-content" class="two-column">
+
+        
+        <div class="subnav-wrapper">
+          
+
+
+        </div>
+        
+
+        <div class="breadcrumb">
+        <ul><li><a href="https://coursys.sfu.ca/">CourSys</a></li><li><a href="https://coursys.sfu.ca/2019sp-cmpt-310-d1/">CMPT 310 D1</a></li><li><a href="https://coursys.sfu.ca/2019sp-cmpt-310-d1/pages/">Pages</a></li><li>a4</li></ul>
+        </div>
+
+        <div class="mobile-sub-nav">
+          <div class="mobile-sub-menu"></div>
+        </div>
+
+        <section class="main">
+          <div class="inherited-parsys above-main">
+            
+            
+          </div>
+
+          <div class="parsys main_content">
+            <div class="title section">
+              <div>
+                <h1>Assignment 4 -  MLP for digit classification-update 2 Apr. 3</h1>
+              </div>
+            </div>
+
+            
+
+
+
+
+<div class="wikicontents markdown tex2jax_ignore"><h1>1. The problem</h1>
+<p>In this assignment, you will train a multi-layer perceptron to understand handwritten digits. In particular, the network will take an image of a digit (0-9) and output a prediction of whether the number is odd or even.</p>
+<p><a href="https://coursys.sfu.ca/2019sp-cmpt-310-d1/pages/a4.zip"><strong>Click here to download the files</strong></a></p>
+<h1>2. Datasets</h1>
+<p>The data is drawn from a data set called MNIST.
+Each example is a 28 by 28 gray-scale image, where each pixel is a value between 0 and 1. Given <code>.pkl</code> files contain a list of data points. Each datapoint itself is a list of 785 elements. First 784 elements are the normalized values of pixels (features).
+Also, the last column of each row is the label of the image (0 or 1).
+Our data set has 10,000 training, 2,000 validation and 2,000 test examples.
+We have not provided the test data to you; you will submit your model and we will evaluate its accuracy on the test data.</p>
+<h1>3. The network</h1>
+<p>The network structure is defined by <code>layers</code> parameter in the <code>init_network</code> function. The default model structure is <code>[784,10,1]</code> which means our training data has <strong>784 features</strong> (28 ∗ 28 pixel images), then we have <strong>one hidden layer with 10 neurons</strong> and one output neuron as the output layer. You may change the number of layers or number of neurons if you are interested and apply the network on other problems, but you should submit your assignment with default network structure. To obtain a <strong>simple perceptron network</strong>, should pass <code>layers = [784, 1]</code> to <code>init_network</code> function.<br>
+<span style="color:red">Clarification 1:</span> You can get the desired results for full mark with the provided parameters and network structure. With a correct implementation you can achieve a full-mark-model in less thatn 100 epochs.<br>
+<span style="color:red">Clarification 2:</span> You don't need to check for overfitting anymore. Just make sure you reach 94% on validation set.</p>
+<p>The parameters of a network are represented by its weights <code>W</code> and biases <code>B</code>. For example, <code>W[l][i][j]</code> is the weight which connects neuron <code>i</code> in layer <code>l + 1</code> to neuron <code>j</code> in layer <code>l</code>.
+Likewise, <code>B[l][i]</code> is the bias for neuron <code>i</code> in layer <code>l + 1</code></p>
+<p>In the default settings, the dimensions of <code>W</code> and <code>B</code> are:</p>
+<pre><code>W[0].shape = (10,784)     W[1].shape = (1,10)
+B[0].shape = (10,1)       B[1].shape = (1,1)
+</code></pre>
+<h1>4. Your part</h1>
+<p>You need to implement 2 functions and compare a simple perceptron with the MLP. Your code goes between.</p>
+<pre><code>    # TODO: YOUR CODE STARTS HERE
+</code></pre>
+<p>and</p>
+<pre><code>    # TODO: YOUR CODE ENDS HERE
+</code></pre>
+<p>You are allowed to write extra functions, but do not change the names or arguments of the given functions.</p>
+<h3>4.1 Prerequisites</h3>
+<p>You need to use <code>Python 3.5+</code> and install <code>numpy</code> package in your environment to run the code.
+To install numpy you can use the command line tool pip:</p>
+<pre><code>pip install numpy
+</code></pre>
+<p>You should keep the same structure of folders when running the code (<em>train.pkl</em> and <em>valid.pkl</em> should go in the <em>dataset</em> folder)</p>
+<h3>4.2 Implementing functions</h3>
+<p><strong>Important</strong>: You are strongly encouraged to use vectorized operations in numpy; that is, operations that input or output a whole vector or matrix.
+For example, you should use a dot product in the computation of a neuron's activation.
+Vector operations in numpy are much faster than implementing them directly in python.
+Using vectorized calculations, each epoch should take less than 3 seconds; without vectorized calculations, each epoch may take up to 60 seconds.</p>
+<p><a href="https://www.pythonlikeyoumeanit.com/Module3_IntroducingNumpy/VectorizedOperations.html">This web page</a> has more information about vectorized calculations.</p>
+<p><strong>compute_activations</strong><br>
+In the <code>compute_activations</code> function, you need to implement the feed-forward phase of a neural network that calculates the value of each node's input sum (<code>z</code>) and the result after applying activation function on it (<code>a</code>).
+The output should be two lists (<code>a_s</code> and <code>z_s</code>), with one vector per layer that holds the activations for that layer.
+That is, your results should have the resulting dimensions:</p>
+<pre><code>z_s[0] = None             z_s[1].shape = (10,1)     z_s[2].shape = (1,1)
+a_s[0].shape = (784,1)    a_s[1].shape = (10,1)     a_s[2].shape = (1,1)
+</code></pre>
+<p><strong>backpropagation</strong><br>
+In the <code>backpropagation</code> function, you should implement the backpropagation algorithm, which calculates the derivative of the training error with respect to each of the network's weights.
+Specifically, you should return <code>d_w</code> and <code>d_b</code>, representing the derivative with respect to the weights and biases respectively.
+The derivatives should have the same shape as <code>W</code> and <code>B</code>.</p>
+<h3>4.3 Compare with simple perceptron</h3>
+<p>Once you have finished your backpropagation implementation, use it to compare a multi-layer perceptron to a simple perceptron on this task.</p>
+<p>Default MLP:</p>
+<pre><code>Evaluate using randomly initialized weights:
+Train Loss: 0.5105	Valid Loss: 0.5128	Train Acc: 0.4957	Valid Acc: 0.4825
+
+
+----------Sample values for debugging:----------
+
+z_s[1][0:4]=
+[10.08685914  0.40671609  8.98672967 -6.87494907]
+
+a_s[-1][0:4]=
+[0.3495267]
+
+d_w[-1][0][0:4]=
+[0.14788401 0.0887785  0.14787168 0.00015266]
+
+d_b[0][0:4]=
+[ 3.19604823e-06  3.26817897e-04  1.98406730e-05 -1.78973802e-04]
+
+W[0][0][0:4]
+[ 0.47143516 -1.19097569  1.43270697 -0.3126519 ]
+
+B[0][0:4]
+[ 0.13423762 -0.475063    0.11270962  0.03957573]
+--------------------------------------------------
+Epoch #   1/40	Train Loss: 0.2345	Valid Loss: 0.2397	Train Acc: 0.8433	Valid Acc: 0.8410
+Epoch #   2/40	Train Loss: 0.1981	Valid Loss: 0.2059	Train Acc: 0.8729	Valid Acc: 0.8605
+Epoch #   3/40	Train Loss: 0.1760	Valid Loss: 0.1826	Train Acc: 0.8922	Valid Acc: 0.8850
+</code></pre>
+<p>Simple perceptron:</p>
+<pre><code>Evaluate using randomly initialized weights:
+Train Loss: 0.4276	Valid Loss: 0.4532	Train Acc: 0.5755	Valid Acc: 0.5505
+
+
+----------Sample values for debugging:----------
+
+z_s[1][0:4]=
+[7.88349796]
+
+a_s[-1][0:4]=
+[0.99962323]
+
+d_w[-1][0][0:4]=
+[0. 0. 0. 0.]
+
+d_b[0][0:4]=
+[-1.41902384e-07]
+
+W[0][0][0:4]
+[ 0.47143516 -1.19097569  1.43270697 -0.3126519 ]
+
+B[0][0:4]
+[2.33759847]
+--------------------------------------------------
+Epoch #   1/40	Train Loss: 0.1570	Valid Loss: 0.1678	Train Acc: 0.8517	Valid Acc: 0.8405
+Epoch #   2/40	Train Loss: 0.1394	Valid Loss: 0.1515	Train Acc: 0.8710	Valid Acc: 0.8535
+Epoch #   3/40	Train Loss: 0.1302	Valid Loss: 0.1433	Train Acc: 0.8813	Valid Acc: 0.8640
+</code></pre>
+<h1>5. Useful functions</h1>
+<h3>5.1 View input images</h3>
+<p>The <code>plot_data_row</code> function will display the image of a given digit, which can be useful for getting an intuition for the problem. The input to this function is a list of 785 elements (from train/valid files). A sample usage of this function is provided in the training loop.</p>
+<h3>5.2 Save and Load the model</h3>
+<p>After training the model for <code>max_epoch</code> epochs, the model is saved with a timestamp at the end of the filename. The timestamp is added to make sure you don’t overwrite some previously well-trained model.
+We will run your model to test it -- make sure it works by running, for example:</p>
+<pre><code>python digit_classification.py --mode=test --model=model-20190328-164647.pkl
+</code></pre>
+<h1>6. Evaluation</h1>
+<p>Your work will be evaluated based on the accuracy of your model on the test data (which you don’t have access to), your code and your report.
+In order to get full mark for accuracy you need to have at least 92% accuracy on the test dataset. Remember that having a accuracy on validation set doesn't guarantee to have the same accuracy on unseen data. So do your best!</p>
+<h3>6.1 Self evaluation</h3>
+<p>To validate your implementations, the files include example values of <code>z</code>, <code>a</code>, <code>d_w</code>, <code>d_b</code>, <code>W</code> and <code>B</code> that you should get from running <code>compute_activations</code> and <code>backpropagation</code>. Because the code uses a seed for the random number generator, your results should be identical to ours (up to the limit of numerical precision).</p>
+<h1>7. What to submit</h1>
+<ol>
+<li>Your code in a single python script provided for you <em>digit_classification.py</em>.</li>
+<li>A <em>report.pdf</em> file containing:
+<ul>
+<li>Comparison between a simple perceptron with MLP.</li>
+<li>Give one short piece of feedback about the course so far. What have you found most interesting? Is there a topic that you had trouble understanding? Are there any changes that could improve the value of the course to you?</li>
+<li>How many hours did you spend on this assignment?</li>
+</ul>
+</li>
+<li>Your model file. Rename it to <code>model.pkl</code>.</li>
+</ol></div>
+
+<div class="updateinfo">Updated Thu April 11 2019, 22:13 by mmazraeh.
+
+</div>
+
+
+          </div>
+
+          <div class="inherited-parsys below-main"></div>
+        </section>
+
+        <footer>
+            <div>CourSys is hosted by <a href="https://www.sfu.ca/computing.html">SFU Computing Science</a>.</div>
+          <ul>
+            <li><a href="http://www.sfu.ca/admission">Admission</a></li>
+            <li><a href="http://www.sfu.ca/programs">Programs</a></li>
+            <li><a href="http://www.sfu.ca/learning">Learning</a></li>
+            <li><a href="http://www.sfu.ca/research-at-sfu">Research</a></li>
+            <li><a href="http://www.sfu.ca/sfu-community">Community</a></li>
+            <li><a href="http://www.sfu.ca/about">About</a></li>
+          </ul>
+          <ul>
+            <li><a href="http://www.sfu.ca/campuses/maps.html">Maps + directions</a></li>
+            <li><a href="http://www.lib.sfu.ca/">Library</a></li>
+            <li><a href="http://www.sfu.ca/calendar">Academic Calendar</a></li>
+            <li><a href="http://www.sfu.ca/roads">Road Report</a></li>
+            <li><a href="http://www.sfu.ca/advancement">Give to SFU</a></li>
+          </ul>
+
+          <ul>
+            <li class="header">Connect with us</li>
+            <li>
+              <div class="inherited-parsys connect-with-us">
+                <div class="parsys">
+                  <div class="text parbase section">
+                    <div class="">
+                      <p><a href="http://www.facebook.com/simonfraseruniversity">Facebook</a><br>
+                      <a href="http://www.twitter.com/sfu">Twitter</a><br>
+                      <a href="http://www.youtube.com/user/SFUNews">YouTube</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <ul>
+            <li class="header"><a href="http://www.sfu.ca/clf/contact.html">Contact us</a></li>
+
+            <li>
+              <div class="inherited-parsys contact-us">
+                <div class="parsys">
+                  <div class="text parbase section">
+                    <div class="">
+                      <p>Simon Fraser University<br>
+                      8888 University Drive<br>
+                      Burnaby, B.C.<br>
+                      Canada V5A 1S6</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <ul>
+            <li><div class="inherited-parsys footer-right"></div></li>
+            <li><a href="http://www.sfu.ca/contact/terms-conditions.html">Terms and conditions</a></li>
+            <li>© Simon Fraser University</li>
+          </ul>
+        </footer>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="./CourSys - Assignment 4 - MLP for digit classification-update 2 Apr. 3_files/082e84ea9840.js.download"></script>
+
+
+</body></html>

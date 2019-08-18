@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+int main (void) {
+    cout << "Hello world!!";
+  
+	double x =0;
+	cin >>x;
+	
+	if(x % 1==0){
+
+		if (x %2 ==0)
+			{ cout << "Even";}
+		else if (x % 2 ==1)
+			{ cout << "Odd";}
+	}else {
+	cout << "nonint";
+	}	
+
+
+
+
+
+  return 0;
+}

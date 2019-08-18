@@ -1,0 +1,21 @@
+
+	# var map:
+	#    %rdi - int *A
+	#    %esi - int n
+	#    %rcx - int *endptr
+	#    %eax - int total
+	.globl	sum
+sum:
+	movl	$0, %eax                  # total = 0;
+	movl	%esi, %ecx
+	leaq	(%rdi, %rcx, 4), %rcx     # endptr = A + n;
+
+loop:
+	cmpq    %rdi, %rcx                # while (A < endptr) {
+	jle	endloop
+	subq	$4, %rcx                  #    endptr--;
+	addl	(%rcx), %eax              #    total += *endptr;
+	jmp	loop                      # }
+
+endloop:
+	ret
