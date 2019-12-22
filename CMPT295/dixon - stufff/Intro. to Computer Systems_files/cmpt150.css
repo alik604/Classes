@@ -1,0 +1,197 @@
+/* general style settings */
+body {
+	line-height: 150%
+}
+
+p {
+    text-align: justify;
+}
+
+li {
+	padding-bottom: 5px;
+}
+
+.strong {
+	font-weight: bold;
+}
+
+p.centred {
+	text-align: center;
+}
+
+/* For expressing formulas in larger font */
+.formula {
+	text-align: center;
+	color: black;
+	font-size: 150%;
+}
+/* for ordered sublists */
+.sublist {
+	list-style-type: lower-alpha;
+}
+
+/* h1 for UNIT headings, h2 for TOPIC headings, h3 for Subtopic headings */
+h1.unit-head {
+    font-family: sans-serif;
+    color: gray;
+    text-align: center;
+	margin-left: 10em;
+	margin-right: 4em;
+	padding: 0.5em;
+}
+
+h2.topic-head {
+    font-family: sans-serif;
+    color: blue;
+}
+
+h3.subtopic-head {
+    font-family: sans-serif;
+    color: black;
+	font-size:100%
+}
+/* Style settings for the left-side (and table of contents) topic menus */
+div.unit-menu {
+	float: left;
+	width: 15em;
+	margin: 0em;
+	padding: 0em;
+}
+div.unit-menu p {
+	font-family: sans-serif;
+	font-size: 150%;
+	color: black;
+	text-indent: 1.5em;
+}
+
+div.unit-menu li {
+	margin: 0em;
+	padding: 0em;
+	list-style-type: none;
+}
+
+div.unit-menu a {
+	text-decoration: none;
+	text-indent: 1.5em;
+	font-family: sans-serif;
+}
+
+div.unit-menu h4 {
+	text-indent: 2.5em;
+}
+
+div.unit-text {
+	margin-left: 16em;
+	margin-right: 4em;	
+	border:2px solid black;
+	padding: 2em;
+}
+/* Style settings for definition tables */
+table.defn-table th {
+    border: thin dotted black;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+}
+
+table.defn-table td {
+    border: thin dotted black;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+table.defn-table {
+    border: thin solid black;
+    border-collapse: collapse;
+}
+
+table.defn-table th {
+    background-color: lightgray;
+}
+/* Style settings for displaying proofs */
+ul.proof li {
+	margin: 0em;
+	padding: 0em;
+	list-style-type: none;
+}
+
+ul.proof ol li {
+	margin: 0em;
+	padding: 0em;
+	list-style-type: decimal;
+}
+/* Style settings for the previous-next buttons at the bottom. */
+div.prev-next {
+	padding: 1em;
+    font-family: sans-serif;
+	font-size: 1em;
+    color: gray;
+    text-align: center;
+	margin-left: 16em;
+	margin-right: 4em;
+}
+
+div.prev-next table {
+	font-weight: bold;
+    font-family: sans-serif;
+	text-align: center;
+}
+/* Style settings for the table of contents. */
+table.toc {
+	margin-left: 10px;
+	margin-right: 10px;
+	border: thin solid black;
+	border-collapse: collapse;
+}
+
+table.toc th {
+	padding: 10px;
+	border: thin dotted gray;
+	background-color: lightGray;
+}
+
+table.toc td {
+	padding: 10px;
+	border: thin dotted gray;
+	vertical-align: text-top;
+}
+
+table.toc li {
+	list-style-type: none;
+}
+
+table.toc a {
+	text-decoration: none;
+	font-family: sans-serif;
+}
+
+div.menu-bar {
+	margin-left: 16em;
+	margin-right: 4em;	
+}
+
+div.menu-bar td {
+	background-color: silver;
+	border-style: ridge;
+	padding-left: 6px;
+    padding-right: 6px;
+	border-collapse: collapse;
+}
+	
+ul.index li {
+	list-style-type: none;
+}
+
+ul.index a {
+	text-decoration: none;
+	font-family: sans-serif;
+}
+
+
+
+
+
+
+
+
+

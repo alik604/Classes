@@ -1,0 +1,22 @@
+function PrevNextHdr(url, title, currUnit)
+{
+document.write("<div class='prev-next'>");
+document.write("<center>");
+document.write("<table>");
+document.write("<tr>");
+if (currUnit > 0)
+   {document.write("<td class='prev'><input type='button' value='PREVIOUS TOPIC' onclick='goBack()' /></td>");
+   }
+if (currUnit < 99)
+   {document.write("<td class='prev'><a href=" + url + "><input type='button' value='"+ 'NEXT TOPIC: ' + title + "'></a></td>");
+   }
+document.write("</tr></table>");
+document.write("</center>");
+document.write("</div>");
+}
+
+function goBack()
+  {
+  window.history.go(-1)
+  }
+
