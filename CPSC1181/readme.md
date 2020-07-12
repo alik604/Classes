@@ -4,4 +4,4 @@
 
 
 ##### [lecture slides found at /allFilesDict](https://github.com/alik604/CPSC1181-OOP_in_Java/tree/master/allFilesDict)
-##### Final grade: (high) A-
+##### Final grade: (high) A- 😭
