@@ -1,0 +1,2 @@
+# Calculus 1
+>This course deals primarily with differentiation. The major topics include limits (intuitive approach), development and definition of derivatives, differentiation techniques (algebraic, trigonometric, inverse trigonometric, exponential, and logarithmic functions), curve sketching, applications of derivatives (optimization, related rates, linear motion, differential approximations), antiderivatives, growth and decay.
