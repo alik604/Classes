@@ -1,0 +1,5 @@
+setup.py
+cmpt720a3q1code.egg-info/PKG-INFO
+cmpt720a3q1code.egg-info/SOURCES.txt
+cmpt720a3q1code.egg-info/dependency_links.txt
+cmpt720a3q1code.egg-info/top_level.txt

@@ -1,0 +1,8 @@
+<launch >
+    <node name = 'ekf_ekf' pkg = 'python_ekf' type = 'ekf.py' output = 'screen' />
+    <node name = 'visualizer_visualizer' pkg = 'python_ekf' type = 'visualizer.py' output = 'screen'>
+	     <param name="odom_ekf" value="second_map" /> 
+    </node>
+    <include file = '$(find nuslam)/launch/slam.launch'/>
+
+</launch >
