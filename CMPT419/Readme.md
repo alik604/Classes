@@ -40,6 +40,6 @@ Grade received:
 
 Grade received: A
 
-... I did this as a 2nd year arts major; Alhamdulillah
+I did this as a 2nd year arts major was overcompensating after a horrible co-op experience. Right after this course I got a better co-op, which was as a Security Data Scientist at Telus.
 
-> Was overcompensating after a poor co-op experience. Got a better co-op, which was in Security Data Science, right after this course. 
+> Alhamdulillah 📿
