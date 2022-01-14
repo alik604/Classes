@@ -19,7 +19,7 @@
 | Assignment 3 (13.33%) | 97.92%; Avg 61.94% |
 | Project Report (60%)  |                    |
 
-Grade received:
+Grade received: **A+**
 
 
 
@@ -38,7 +38,7 @@ Grade received:
 | [Project Report (35.00%)](https://coursys.sfu.ca/2020sp-cmpt-726-x1/+pr/) | Mon April 20 2020, 23:59 | grades released | 40.00/40.00   |
 | [Final Exam](https://coursys.sfu.ca/2020sp-cmpt-726-x1/+exam/) | none                     | grades released | 75.00/100.00  |
 
-Grade received: A
+Grade received: **A**
 
 I did this as a 2nd year arts major was overcompensating after a horrible co-op experience. Right after this course I got a better co-op, which was as a Security Data Scientist at Telus.
 
