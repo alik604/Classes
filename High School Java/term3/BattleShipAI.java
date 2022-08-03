@@ -1,4 +1,4 @@
-package term3;
+package term3.term3;
 
 //Amory KC Wong
 //Carson Graham Secondary

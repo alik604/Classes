@@ -24,7 +24,7 @@ import javax.swing.UIManager;
  * @author kali add operation and history bar add 1/mem add 3 evil trig
  *         functions
  */
-public class CalculatorV1 {
+public class CalculatorV2 {
 
 	// --------------------------------------------
 	private static JFrame frame = new JFrame("Calculator");
@@ -90,7 +90,8 @@ public class CalculatorV1 {
 			public void actionPerformed(ActionEvent e) {
 				numb = numb + '1';
 				top.append("\n" + numb);
-				frame.requestFocus();
+				frame.requestFocus();// //////////////////////////////
+										// needed!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 			}
 		};
 		ActionListener two_listener = new ActionListener() {
@@ -549,9 +550,9 @@ public class CalculatorV1 {
 			}
 		});
 
-		JButton SinMin1 = new JButton(" sin¹");
-		JButton CosMin1 = new JButton(" cos¹");
-		JButton TanMin1 = new JButton(" tan¹");
+		JButton SinMin1 = new JButton(" sin�");
+		JButton CosMin1 = new JButton(" cos�");
+		JButton TanMin1 = new JButton(" tan�");
 
 		// ///// make object creation is a for loop with array and add listeners
 		// ///// Automatically

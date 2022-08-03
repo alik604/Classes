@@ -1,6 +1,7 @@
-## ITC11 & ITC12, I did both in java 
-> *IT and/or Computer Programming class*
-
+# This branch is a code review in 2022 of my 2014 to 2017 java code.
+ 
+# ITC11 & ITC12, I did both in java 
+> *IT and/or Computer Programming class
 
 * [Scientific calculator]( https://github.com/alik604/Classes/blob/master/High%20School%20Java/CalculatorV5.java)
 * [The Jolly Watcher (TJW): notepad with buttons to open (the pirate bay) links to tv shows](https://github.com/alik604/Classes/blob/master/High%20School%20Java/TJWgui.java)

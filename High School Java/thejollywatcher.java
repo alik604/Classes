@@ -1,8 +1,6 @@
-package ark_2016;
 /**
  * Created by kali on 12/29/2015.		
  */
-
 import java.awt.*;
 import java.io.IOException;
 import java.net.URI;
@@ -32,7 +30,7 @@ public class thejollywatcher {
 		// d.browse(new URI(a));
 
 		try {
-
+			// TODO 2022, better to build the URL in a function and avoid repeated code... but not worth the time now.
 			switch (dateTime.get(Calendar.DAY_OF_WEEK)) {
 			case Calendar.SUNDAY:
 				d.browse(new URI(
