@@ -1,2 +1,5 @@
 MATH232.7z
 /!NotTaken/*
+*.class
+*/.idea
+*/out
