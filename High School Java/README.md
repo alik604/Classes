@@ -1,4 +1,5 @@
-## assorted files from ITC11 & ITC12. i did both in java 
+## ITC11 & ITC12, I did both in java 
+> *IT and/or Computer Programming class*
 
 
 * [Scientific calculator]( https://github.com/alik604/Classes/blob/master/High%20School%20Java/CalculatorV5.java)
