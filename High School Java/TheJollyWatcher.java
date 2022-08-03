@@ -9,7 +9,7 @@ import java.util.Calendar;
 
 // web
 
-public class thejollywatcher {
+public class TheJollyWatcher {
 
 	public static void main(String args[]) {
 		// throws IOException,URISyntaxException

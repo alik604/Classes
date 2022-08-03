@@ -10,7 +10,7 @@ package term2;
 
 import java.util.Scanner;
 
-public class smm {
+public class Smm {
     public static void main(String[] args) {
 
         Scanner scan = new Scanner(System.in);

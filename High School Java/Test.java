@@ -15,7 +15,7 @@ import javax.swing.JTextField;
 import javax.swing.SpringLayout;
 import javax.swing.UIManager;
 
-public class test {
+public class Test {
 
     public static void main(String[] arguments) {
 
